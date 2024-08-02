@@ -22,7 +22,7 @@ function App() {
 
     try {
       const parsedInput = JSON.parse(input);
-      const result = await axios.post('http://localhost:3000/bfhl', parsedInput);
+      const result = await axios.post('https://bajajfinservdev.vercel.app/', parsedInput);
       setResponse(result.data);
     } catch (err) {
       setError(err.message);
